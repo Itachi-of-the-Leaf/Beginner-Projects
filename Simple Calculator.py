@@ -3,10 +3,6 @@ This is a program that creates a simple calculator
 We first define functions, then we ask the user for input and then we call the functions
 """
 #This function adds two numbers
-from os import kill
-from typing import Type
-
-
 def add(a , b):
     print("The sum of " , a , "and" , b , "is:" , a + b)
 
@@ -40,12 +36,12 @@ try:
     a = int(input("Please enter the first number: "))
 except ValueError as VE:
     print("Please enter a number! Look at the error you've created!")
-    raise
+    exit()
 try:
     b = int(input("Please enter the second number: "))
 except ValueError as VE:
     print("Please enter a number! Look at the error you've created!")
-    raise
+    exit()
 print("Would you like to add(1) , subtract(2), multiply(3), divide(4), get exponent(5) or get the multiplication table(6) of the numbers?")
 choice = input("Enter your choice: (1/2/3/4/5/6): ")
 #Implementing functions based on the input.
